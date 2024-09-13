@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -27,4 +28,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default memo(App);

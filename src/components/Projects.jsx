@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { PROJECTS } from "../details";
 import { motion } from "framer-motion";
 
@@ -57,4 +58,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default memo(Projects);

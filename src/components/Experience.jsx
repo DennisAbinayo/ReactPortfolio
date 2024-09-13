@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { EXPERIENCES } from "../details";
 import { motion } from "framer-motion";
 
@@ -55,4 +56,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default memo(Experience);

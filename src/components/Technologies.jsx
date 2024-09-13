@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { RiTailwindCssFill, RiReactjsFill } from "react-icons/ri";
 import { SiFramer, SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
@@ -83,4 +84,4 @@ function Technologies() {
   );
 }
 
-export default Technologies;
+export default memo(Technologies);

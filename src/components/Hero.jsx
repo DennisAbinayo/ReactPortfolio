@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { HERO_CONTENT } from "../details";
 import { motion } from "framer-motion";
 
@@ -55,4 +56,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default memo(Hero);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { ABOUT_TEXT } from "../details";
 import { motion } from "framer-motion";
 
@@ -42,4 +43,4 @@ function About() {
   );
 }
 
-export default About;
+export default memo(About);

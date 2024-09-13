@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   FaGithub,
   FaInstagram,
@@ -51,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

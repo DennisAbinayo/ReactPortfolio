@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { CONTACT } from "../details";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -44,4 +45,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default memo(Contact);
