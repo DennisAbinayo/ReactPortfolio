@@ -1,10 +1,16 @@
 import { memo } from "react";
 import { EXPERIENCES } from "../details";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 function Experience() {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div
+      className={`border-b ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-200"
+      } pb-4`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -22,7 +28,7 @@ function Experience() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/4"
           >
-            <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+            <p className="mb-2 text-sm text-neutral-500 ">{experience.year}</p>
           </motion.div>
           <motion.div
             whileInView={{ x: 0, opacity: 1 }}

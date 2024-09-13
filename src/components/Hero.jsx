@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { HERO_CONTENT } from "../details";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -8,8 +9,13 @@ const container = (delay) => ({
 });
 
 function Hero() {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-36">
+    <div
+      className={`border-b ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-200"
+      } pb-4 lg:mb-36`}
+    >
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2 ">
           <div className="flex flex-col items-center lg:items-start ">
@@ -47,7 +53,7 @@ function Hero() {
               transition={{ duration: 0.85, delay: 1.5 }}
               src="https://images.pexels.com/photos/6693379/pexels-photo-6693379.jpeg?auto=compress&cs=tinysrgb&w=400"
               alt="profile"
-              className="object-cover object-center rounded-md"
+              className="object-cover object-center rounded-md shadow-2xl "
             />
           </div>
         </div>

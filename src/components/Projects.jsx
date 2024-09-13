@@ -1,10 +1,16 @@
 import { memo } from "react";
 import { PROJECTS } from "../details";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 function Projects() {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div
+      className={`border-b ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-200"
+      } pb-4`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}

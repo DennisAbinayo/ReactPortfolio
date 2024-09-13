@@ -2,10 +2,16 @@ import { memo } from "react";
 import { CONTACT } from "../details";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 function Contact() {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="border-b border-neutral-900 pb-24">
+    <div
+      className={`border-b ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-200"
+      } pb-24`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -40 }}

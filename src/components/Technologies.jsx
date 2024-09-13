@@ -3,6 +3,7 @@ import { RiTailwindCssFill, RiReactjsFill } from "react-icons/ri";
 import { SiFramer, SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const icon = (duration) => ({
   initial: { y: -10 },
@@ -17,9 +18,22 @@ const icon = (duration) => ({
   },
 });
 
+const technologies = [
+  { Icon: SiJavascript, color: "text-yellow-400", duration: 2.5 },
+  { Icon: RiReactjsFill, color: "text-cyan-400", duration: 3 },
+  { Icon: SiFramer, color: "", duration: 2 },
+  { Icon: RiTailwindCssFill, color: "text-[#38bdf8]", duration: 3.5 },
+  { Icon: SiRedux, color: "text-purple-400", duration: 2.8 },
+];
+
 function Technologies() {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="border-b border-neutral-900 pb-24">
+    <div
+      className={`border-b ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-200"
+      } pb-24`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -34,51 +48,17 @@ function Technologies() {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap justify-center items-center gap-4"
       >
-        {/* javascript  */}
-        <motion.div
-          variants={icon(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiJavascript className="text-6xl text-center text-yellow-400" />
-        </motion.div>
-        {/* react  */}
-        <motion.div
-          variants={icon(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiReactjsFill className="text-6xl text-center text-cyan-400" />
-        </motion.div>
-        {/* framer  */}
-        <motion.div
-          variants={icon(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiFramer className="text-6xl text-center " />
-        </motion.div>
-        {/* tailwind  */}
-        <motion.div
-          variants={icon(3.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiTailwindCssFill className="text-6xl text-center text-[#38bdf8]" />
-        </motion.div>
-        {/* redux  */}
-        <motion.div
-          variants={icon(2.8)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiRedux className="text-6xl text-center text-purple-400" />
-        </motion.div>
+        {technologies.map(({ Icon, color, duration }, index) => (
+          <motion.div
+            key={index}
+            variants={icon(duration)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-4"
+          >
+            <Icon className={`text-6xl text-center ${color}`} />
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );

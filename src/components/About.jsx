@@ -1,10 +1,16 @@
 import { memo } from "react";
 import { ABOUT_TEXT } from "../details";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 function About() {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="border-b border-neutral-900 pb-4 ">
+    <div
+      className={`border-b ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-200"
+      } pb-4`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -24,7 +30,7 @@ function About() {
             <img
               src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt="Abstract code on a computer screen"
-              className="object-cover w-full h-full rounded-md"
+              className="object-cover w-full h-full rounded-md "
             />
           </motion.div>
         </div>
