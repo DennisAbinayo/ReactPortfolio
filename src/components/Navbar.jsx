@@ -1,9 +1,9 @@
 import { memo } from "react";
 import {
   FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaSquareXTwitter,
+  // FaInstagram,
+  // FaLinkedin,
+  // FaSquareXTwitter,
   FaMoon,
   FaSun,
 } from "react-icons/fa6";
@@ -12,9 +12,13 @@ import { useTheme } from "../context/ThemeContext";
 
 const socialLinks = [
   { Icon: FaGithub, href: "https://github.com/DennisAbinayo", hoverColor: "" },
-  { Icon: FaSquareXTwitter, href: "#", hoverColor: "hover:text-[#1DA1F2]" },
-  { Icon: FaInstagram, href: "#", hoverColor: "hover:text-[#E1306C]" },
-  { Icon: FaLinkedin, href: "#", hoverColor: "hover:text-[#0077B5]" },
+  // {
+  //   Icon: FaSquareXTwitter,
+  //   href: "https://github.com/DennisAbinayo",
+  //   hoverColor: "hover:text-[#1DA1F2]",
+  // },
+  // { Icon: FaInstagram, href: "#", hoverColor: "hover:text-[#E1306C]" },
+  // { Icon: FaLinkedin, href: "https://github.com/DennisAbinayo", hoverColor: "hover:text-[#0077B5]" },
 ];
 
 const Navbar = () => {

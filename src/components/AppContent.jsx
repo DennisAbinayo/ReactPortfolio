@@ -38,7 +38,7 @@ const AppContent = () => {
         <Hero />
         <About />
         <Technologies />
-        <Experience />
+        {/* <Experience /> */}
         <Projects />
         <Contact />
       </div>

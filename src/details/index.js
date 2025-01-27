@@ -1,6 +1,6 @@
-export const HERO_CONTENT = `As an enthusiastic junior front-end developer based in Nairobi, Kenya, I'm passionate about crafting engaging web experiences. With growing expertise in React, Tailwind CSS, and Framer Motion, I'm eager to contribute my skills to innovative projects and continue expanding my knowledge in this dynamic field. My focus on creating responsive, animated interfaces sets me apart as I strive to build the next generation of web applications.`;
+export const HERO_CONTENT = `As an enthusiastic junior front-end developer , I'm passionate about crafting engaging web experiences. With growing expertise in React, Tailwind CSS, and Framer Motion, I'm eager to contribute my skills to innovative projects and continue expanding my knowledge in this dynamic field. My focus on creating responsive, animated interfaces sets me apart as I strive to build the next generation of web applications.`;
 
-export const ABOUT_TEXT = `My journey in web development began two years ago when I discovered my passion for turning ideas into interactive digital experiences. Since then, I've been honing my skills in React, mastering the art of responsive design with Tailwind CSS, and exploring the possibilities of fluid animations using Framer Motion. I'm fascinated by the efficiency of utility-first CSS and the power of component-based architecture in React. As a lifelong learner, I'm currently diving deeper into state management with Redux and expanding my Python skills for full-stack development. When I'm not coding, you'll find me participating in local tech meetups, contributing to open-source React projects, or exploring the beautiful landscapes of Kenya.`;
+export const ABOUT_TEXT = `My journey in web development began two years ago when I discovered my passion for turning ideas into interactive digital experiences. Since then, I've been honing my skills in React, mastering the art of responsive design with Tailwind CSS, and exploring the possibilities of fluid animations using Framer Motion. I'm fascinated by the efficiency of utility-first CSS and the power of component-based architecture in React. As a lifelong learner, I'm currently diving deeper into state management with Redux and expanding my Python skills for full-stack development. When I'm not coding, you'll find me playing chess, or exploring the beautiful landscapes of Kenya.`;
 
 export const EXPERIENCES = [
   {
@@ -37,26 +37,29 @@ export const PROJECTS = [
   {
     title: "Personal Portfolio",
     image:
-      "https://images.pexels.com/photos/3243090/pexels-photo-3243090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "A responsive portfolio website showcasing my projects and skills, featuring smooth page transitions and interactive elements.",
     technologies: ["React", "Framer Motion", "Tailwind CSS"],
+    link: "https://abinayo.vercel.app/",
   },
   {
-    title: "Kenyan Tourism Explorer",
+    title: "Rick and Morty Wiki",
     image:
-      "https://images.pexels.com/photos/5191375/pexels-photo-5191375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.unsplash.com/photo-1592564630984-7410f94db184?q=80&w=2046&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "An interactive guide for tourists in Kenya, featuring popular destinations, travel tips, and a booking system.",
-    technologies: ["React", "Redux", "Tailwind CSS", "Framer Motion"],
+      "A web application that provides information about the popular TV show 'Rick and Morty', including characters, episodes, and locations.",
+    technologies: ["React", "Tailwind CSS"],
+    link: "https://dennis-rick-morty.vercel.app/",
   },
   {
-    title: "Nairobi Tech Community",
+    title: "Calorie Counter",
     image:
-      "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.unsplash.com/photo-1648421714382-70d47442b354?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "A platform for Nairobi's tech enthusiasts to share ideas, post articles, and connect with each other.",
-    technologies: ["React", "Tailwind CSS", "Redux"],
+      "A calorie counter application that allows users to track their daily calorie intake and set goals for healthy eating habits.",
+    technologies: ["Python", "Django", "Tailwind CSS", "Tkinter"],
+    link: "https://github.com/DennisAbinayo/calorie_counter/",
   },
   {
     title: "AfriCode Learning Platform",
@@ -70,6 +73,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "123 Innovation Avenue, Nairobi, Kenya",
-  phoneNumber: "+254 712 345 678",
+  phoneNumber: "+254 743 568 589",
   email: "dennisabinayo5@gmail.com",
 };
